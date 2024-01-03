@@ -2,6 +2,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+global counter
 counter = 0
 
 @app.get("/api/python")
