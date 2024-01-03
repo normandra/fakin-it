@@ -7,4 +7,4 @@ state["counter"] = 0
 @app.get("/api/python")
 def hello_world():
     state["counter"] += 1
-    return {"api calls": counter}
+    return {"api calls": state["counter"]}
