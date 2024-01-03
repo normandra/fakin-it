@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 
 app = FastAPI()
+state = {}
+state["counter"] = 0
 
 @app.get("/api/python")
 def hello_world():
-    return {"message": "Hello World"}
+    state["counter"] += 1
+    return {"hello hello": state["counter"]}
